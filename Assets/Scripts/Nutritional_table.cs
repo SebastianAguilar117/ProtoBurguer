@@ -6,7 +6,8 @@ using TMPro;
 public class Nutritional_table : MonoBehaviour
 {
     public int _qtty;
-    public TMP_Text statText;
+    public TMP_Text statCalorias;
+    public TMP_Text stat_Grasas;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,9 +20,25 @@ public class Nutritional_table : MonoBehaviour
         
     }
 
-    public void AddStat(int qtty)
+    public void AddStat(string stat, int qtty)
     {
-        _qtty += qtty;
-        statText.text = _qtty.ToString();
+        if (stat == "statCalorias") {
+            _qtty += qtty;
+            statCalorias.text = _qtty.ToString();
+        }
+    }
+    public void RemoveStat(string stat, int qtty)
+    {
+        if (stat == "statCalorias")
+        {
+            _qtty -= qtty;
+            statCalorias.text = _qtty.ToString();
+        }
+    }
+
+    public void ResetStat(string stat)
+    {
+        _qtty = 0;
+        statCalorias.text = _qtty.ToString();
     }
 }

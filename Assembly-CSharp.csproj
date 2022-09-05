@@ -57,8 +57,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\Selection.cs" />
-    <Compile Include="Assets\Scripts\Modify_Values.cs" />
     <Compile Include="Assets\Scripts\Nutritional_table.cs" />
+    <Compile Include="Assets\Scripts\Ingredient_Values.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
